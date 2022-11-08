@@ -1,0 +1,16 @@
+query GetContact($id: Int) {
+  contactsCollection(filter : {id : {eq : $id}}) {
+    edges {
+      node {
+        id
+        firstName
+        lastName
+        fullName
+        email
+        status
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}

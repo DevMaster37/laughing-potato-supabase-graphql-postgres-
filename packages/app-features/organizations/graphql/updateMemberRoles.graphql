@@ -1,0 +1,21 @@
+mutation UpdateMemberRoles(
+  $userId: Int!
+  $organizationId: Int!
+  $values: OrganizationsUpdateInput!
+) {
+  updateOrganizationsCollection(
+    filter:{ userid: { eq : $userId}, id: {eq : $organizationId}  },
+    set: $values){
+      records{
+        id
+        name
+        slug
+        email
+        logo
+        subscription
+        createdAt
+        updatedAt
+        plan
+      }
+    }
+}

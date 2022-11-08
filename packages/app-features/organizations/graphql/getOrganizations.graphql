@@ -1,0 +1,13 @@
+query GetOrganizations {
+  organizationsCollection {
+    edges {
+      node {
+        id
+        name
+        slug
+        plan
+        logo
+      }
+    }
+  }
+}

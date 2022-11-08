@@ -1,0 +1,19 @@
+query GetCurrentUser {
+  usersCollection {
+    edges {
+      node {
+        id
+        name
+        email
+        avatar
+        organizations {
+          id
+          name
+          slug
+          plan
+          logo
+        }
+      }
+    }
+  }
+}

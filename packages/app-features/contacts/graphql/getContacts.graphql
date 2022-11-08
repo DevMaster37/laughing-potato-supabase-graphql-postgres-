@@ -1,0 +1,16 @@
+query GetContacts($type: String) {
+  contactsCollection {
+    edges {
+      node {
+        id
+        firstName
+        lastName
+        fullName
+        email
+        status
+        createdAt
+        updatedAt
+      }
+    }
+  }
+}

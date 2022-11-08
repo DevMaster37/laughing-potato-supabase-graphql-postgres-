@@ -1,0 +1,9 @@
+query GetSubscription($slug: String) {
+  organizationsCollection(filter: { slug : {eq : $slug}}){
+    edges {
+      node {
+        subscription 
+      }
+    }
+  }
+}

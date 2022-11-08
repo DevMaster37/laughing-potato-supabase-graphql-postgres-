@@ -1,0 +1,11 @@
+mutation CreateContact($value: ContactsInsertInput!) {
+  insertIntoContactsCollection(objects: [$value]){
+    records{
+      id
+      firstName
+      lastName
+      fullName
+      email
+    }
+  }
+}
